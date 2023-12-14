@@ -5,8 +5,10 @@ leftwristY=0;
 rightwristX=0;
 rightwristY=0;
 ponesque=0;
+pondire=0;
 statush="";
 statusp="";
+
 
 function preload(){
     harry =loadSound("harry.mp3");
@@ -49,6 +51,17 @@ function modelLoaded(){
         }
        
         }
+
+        if(pondire>0.2){
+            circle(rightwristX,rightwristY,50);
+            peter.stop();
+
+        if(statush==false){
+            harry.play();
+            document.getElementById("nomemusica").innerHTML="tocando musica de harry potter";
+        }
+       
+        }
     }
 
     function gotposes(results){
@@ -64,6 +77,7 @@ function modelLoaded(){
             rightwristy=results[0].pose.rightWrist.y;
         
             ponesque=results[0].pose.keypoints[9].score;
+            pondire=results[0].pose.keypoints[10].score;
         }
     
     }
