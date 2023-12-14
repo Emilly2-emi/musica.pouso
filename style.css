@@ -1,0 +1,20 @@
+body{
+    background-repeat: no repeat;
+    background-size: cover;
+}
+
+.copy_right_footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#nomemusica{
+    box-shadow: 5px 5px 5px #DDBCFE;
+}
+
+.canvas{
+    box-shadow: 5px 5px 5px #DDBCFE;
+    border-radius: 5px;
+}
